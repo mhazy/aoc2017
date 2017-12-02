@@ -17,7 +17,7 @@ const findDivisibles = row => {
   const sorted = R.sort((a, b) => b - a, row);
   const len = sorted.length;
   for (let i = 0; i < len; i++) {
-    for (let j = len - 1; j >= 0; j--) {
+    for (let j = len - 1; j >= i; j--) {
       const divided = sorted[i] / sorted[j];
       if (i !== j && isInteger(divided)) {
         return [sorted[i], sorted[j]];
