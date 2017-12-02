@@ -1,0 +1,14 @@
+{
+  "name": "advent-of-code-2017",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mark Hayes",
+  "license": "WTFPL",
+  "dependencies": {
+    "jest": "^21.2.1",
+    "ramda": "^0.25.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
