@@ -31,12 +31,8 @@ describe("Day 2 - Corruption Checksum", () => {
     expect(result).toMatchObject([[5, 1, 9, 5], [7, 5, 3], [2, 4, 6, 8]]);
   });
 
-  it("finds row maximum", () => {
-    expect(dayTwo.rowMaximum([1, 2, 3, 4])).toBe(4);
-  });
-
-  it("finds row maximum", () => {
-    expect(dayTwo.rowMinimum([1, 2, 3, 4])).toBe(1);
+  it("finds row min/maximum", () => {
+    expect(dayTwo.getMinMax([1, 2, 3, 4])).toMatchObject([4, 1]);
   });
 
   it("calculates checksum of row", () => {

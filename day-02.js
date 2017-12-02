@@ -4,13 +4,11 @@ const toNumber = R.compose(R.map(Number), R.split(/\s+/));
 
 const parseInput = input => R.map(toNumber, R.split(/\n/, input));
 
-const rowMaximum = R.reduce(R.max, -Infinity);
-const rowMinimum = R.reduce(R.min, Infinity);
-
-const calculateRowChecksum = R.compose(
-  R.apply(R.subtract),
-  R.applySpec([rowMaximum, rowMinimum])
+const getMinMax = R.compose(
+  R.applySpec([R.last, R.head]),
+  R.sort((a, b) => a - b)
 );
+const calculateRowChecksum = R.compose(R.apply(R.subtract), getMinMax);
 
 const createChecksumFn = fn => R.compose(R.sum, R.map(fn), parseInput);
 const isInteger = num => num === parseInt(num);
@@ -46,8 +44,7 @@ module.exports = {
   calculateDivisibleRowChecksum,
   calculateDivisibleSheetChecksum,
   isInteger,
-  rowMaximum,
-  rowMinimum,
+  getMinMax,
   parseInput,
   calculateRowChecksum,
   calculateSheetChecksum
