@@ -1,8 +1,8 @@
 const R = require("ramda");
 
-const toNumber = R.compose(R.map(Number), R.split(" "));
+const toNumber = R.compose(R.map(Number), R.split(/\s+/));
 
-const parseInput = input => R.map(toNumber, R.split("\n", input));
+const parseInput = input => R.map(toNumber, R.split(/\n/, input));
 
 const rowMaximum = R.reduce(R.max, -Infinity);
 const rowMinimum = R.reduce(R.min, Infinity);
