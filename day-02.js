@@ -24,8 +24,6 @@ const findDivisibles = row => {
       }
     }
   }
-
-  return false;
 };
 
 const calculateDivisibleRowChecksum = R.compose(
