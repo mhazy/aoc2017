@@ -64,4 +64,19 @@ describe("Day 3 - Sprial Memory", () => {
     const result = grid.findGreatestAfter(puzzleInput);
     expect(result).toBe(puzzleAnser);
   });
+
+  it("calcuates nearest odd square", () => {
+    expect(lib.findNearestOddSquare(24)).toBe(5);
+    expect(lib.findNearestOddSquare(21)).toBe(5);
+    expect(lib.findNearestOddSquare(25)).toBe(5);
+  });
+
+  it("calculates the day three, part one, solution in a different way", () => {
+    expect(lib.findDistanceAlternate(1)).toBe(0);
+    expect(lib.findDistanceAlternate(12)).toBe(3);
+    expect(lib.findDistanceAlternate(23)).toBe(2);
+    expect(lib.findDistanceAlternate(31)).toBe(6);
+    expect(lib.findDistanceAlternate(1024)).toBe(31);
+    expect(lib.findDistanceAlternate(347991)).toBe(480);
+  });
 });
