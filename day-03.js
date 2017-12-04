@@ -57,7 +57,7 @@ const gridPositions = [
 ];
 
 const getNeighbours = position =>
-  R.map(pos => R.zipWith((a, b) => a + b, pos, position), gridPositions);
+  R.map(pos => R.zipWith(R.unapply(R.sum), pos, position), gridPositions);
 
 const generateGrid = rings => {
   const grid = {
