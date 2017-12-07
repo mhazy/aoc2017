@@ -6,7 +6,8 @@
   "license": "WTFPL",
   "dependencies": {
     "jest": "^21.2.1",
-    "ramda": "^0.25.0"
+    "ramda": "^0.25.0",
+    "treeify": "^1.0.1"
   },
   "scripts": {
     "test": "jest",
