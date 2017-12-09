@@ -84,8 +84,8 @@ describe("Day 8 - I heard you like registers", () => {
 
   it("processes day 08, part one, answer", () => {
     const result = lib.parseAndProcessInstructions(puzzleInput);
-    console.log(result);
     expect(result).toMatchObject({
+      _highest: 6026,
       xrh: 980,
       koq: 2744,
       s: 2099,
