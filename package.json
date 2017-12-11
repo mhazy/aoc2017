@@ -6,6 +6,7 @@
   "license": "WTFPL",
   "dependencies": {
     "jest": "^21.2.1",
+    "prettier": "^1.9.1",
     "ramda": "^0.25.0",
     "treeify": "^1.0.1"
   },
