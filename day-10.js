@@ -41,7 +41,7 @@ class KnotHasher {
         val = val ^ this._list[j];
         j = j + 1;
       }
-      const stringVal = (val <= 16 ? "0" : "") + val.toString(16);
+      const stringVal = (val < 16 ? "0" : "") + val.toString(16);
       hash = hash + stringVal;
 
       i = i + 1;
